@@ -1,0 +1,32 @@
+body {
+    background: url('Omnitrix1.png') no-repeat center black;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    width: 360px;
+    height: 360px;
+    background: radial-gradient(circle, rgba(0, 255, 0, 0.414) 20%, rgba(0, 255, 0, 0.129) 60%, rgba(0, 255, 0, 0) 100%);
+    border-radius: 50%;
+    filter: blur(15px);
+    animation: pulseNeon 4s infinite alternate ease-in-out;
+}
+
+@keyframes pulseNeon {
+    0% {
+        filter: blur(10px) brightness(1);
+        transform: scale(1);
+    }
+    100% {
+        filter: blur(20px) brightness(1.2);
+        transform: scale(0.2);
+    }
+}
