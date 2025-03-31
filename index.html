@@ -1,12 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Omnitrix</title>
+    <script defer src="script.js"></script>
+    <title>Omnitrix Selector</title>
 </head>
 <body>
+    <div class="menu">
+        <button id="online">Online</button>
+        <button id="local">Local</button>
+        <button id="suporte">Suporte</button>
+        <button id="devs">Devs</button>
+    </div>
 
+    <div class="omnitrix-container">
+        <div class="ring-overlay"></div>
+        <div class="selector-ring">
+            <div id="prev-character" class="character-slot"></div>
+            <div id="current-character" class="character-slot"></div>
+            <div id="next-character" class="character-slot"></div>
+        </div>
+    </div>
+    
+    <div class="nav-buttons">
+        <button id="prev">&#9664;</button>
+        <button id="next">&#9654;</button>
+    </div>
+    
+    <footer>
+        <div class="footer-text">
+            <p>Fizemos este RPG pensando no universo de BEN 10...</p>
+        </div>
+        <p>&copy; 2025 RPG Omnitrix. Todos os direitos reservados.</p>
+    </footer>
 </body>
 </html>

@@ -1,32 +1,211 @@
+/* Geral */
 body {
-    background: url('Omnitrix1.png') no-repeat center black;
+    background: url('Omniverse.png') no-repeat center black;
     background-size: contain;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-    position: relative;
+    flex-direction: column;
 }
 
-body::after {
-    content: "";
+.menu {
     position: absolute;
-    width: 360px;
-    height: 360px;
-    background: radial-gradient(circle, rgba(0, 255, 0, 0.414) 20%, rgba(0, 255, 0, 0.129) 60%, rgba(0, 255, 0, 0) 100%);
-    border-radius: 50%;
-    filter: blur(15px);
-    animation: pulseNeon 4s infinite alternate ease-in-out;
+    background-color: black;
+    top: 20px;
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
-@keyframes pulseNeon {
-    0% {
-        filter: blur(10px) brightness(1);
-        transform: scale(1);
+button {
+    padding: 10px 20px;
+    background: #00950a;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+button:hover, button:focus {
+    background-color: #007a0a;
+    transform: scale(1.1);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:active {
+    background-color: #005f05;
+    transform: scale(1);
+}
+
+* {
+    touch-action: manipulation;
+}
+
+.omnitrix-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ring-overlay {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: url('bola_ominiverse.png') no-repeat center;
+    background-size: contain;
+    border-radius: 50%;
+    pointer-events: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.selector-ring {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.character-slot {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.character-slot img {
+    width: 85px;
+    height: 85px;
+    object-fit: contain;
+}
+
+#prev-character {
+    top: 30%; 
+    left: 15%;
+    transform: translate(-50%, -50%);
+}
+
+#current-character {
+    top: 10%; 
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.6);
+}
+
+#next-character {
+    top: 30%;
+    right: 15%;
+    transform: translate(50%, -50%);
+}
+
+.nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+button#prev, button#next {
+    padding: 10px 20px;
+    background: #00950a;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+footer {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    color: white;
+    font-size: 14px;
+    padding: 10px 0px;
+    z-index: 10;
+}
+
+@media (max-width: 600px) {
+    footer {
+        bottom: -320px;
     }
-    100% {
-        filter: blur(20px) brightness(1.2);
-        transform: scale(0.2);
+}
+
+@media (min-width: 601px) {
+    footer {
+        bottom: -260px;
+    }
+}
+
+.footer-text {
+    margin-bottom: 10px;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+footer p {
+    margin-top: 10px;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #2e2e2e;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #01d13b;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #00950a;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #00950a;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+::-webkit-scrollbar:focus {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 600px) {
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #01d13b;
+    }
+}
+
+@media (min-width: 601px) {
+    ::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #01d13b;
     }
 }
