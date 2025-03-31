@@ -110,6 +110,7 @@ button:active {
 }
 
 .nav-buttons {
+    position: absolute;
     display: flex;
     justify-content: space-between;
     gap: 20px;
