@@ -201,25 +201,21 @@ const bgMusic = document.getElementById("bg-music");
 const selectSound = document.getElementById("select-sound");
 const transformSound = document.getElementById("transform-sound");
 
-// Função para iniciar o áudio, garantindo que o usuário tenha interagido
 function loadAudio() {
-    const audioUrl = "background.mp3";  // Caminho para o áudio
+    const audioUrl = "background.mp3";
 
     bgMusic.src = audioUrl;
     bgMusic.volume = 0.5;
 
-    // Tentar tocar o áudio após a interação do usuário
     bgMusic.play().catch(error => {
         console.error("Erro ao tentar reproduzir o áudio:", error);
     });
 }
 
-// Garantir que o áudio só toque após o primeiro clique do usuário
 document.getElementById("mute-toggle").addEventListener("click", () => {
-    loadAudio();  // Recarregar o áudio quando o usuário clicar
+    loadAudio();
 });
 
-// Função para alternar entre mute e unmute
 document.getElementById("mute-toggle").addEventListener("click", () => {
     const muted = !bgMusic.muted;
     bgMusic.muted = muted;
@@ -228,7 +224,6 @@ document.getElementById("mute-toggle").addEventListener("click", () => {
     document.getElementById("mute-toggle").textContent = muted ? "🔇" : "🔊";
 });
 
-// Função para ajustar o volume
 document.getElementById("volume-slider").addEventListener("input", (event) => {
     const volume = event.target.value;
     bgMusic.volume = volume;
@@ -236,7 +231,6 @@ document.getElementById("volume-slider").addEventListener("input", (event) => {
     transformSound.volume = volume;
 });
 
-// Função para atualizar a seleção dos personagens
 function updateCharacters() {
     const prevIndex = (currentIndex - 1 + characters.length) % characters.length;
     const nextIndex = (currentIndex + 1) % characters.length;
@@ -246,7 +240,6 @@ function updateCharacters() {
     document.getElementById("next-character").innerHTML = `<img src="images/${characters[nextIndex].name.toLowerCase()}.png" alt="${characters[nextIndex].name}">`;
 }
 
-// Função para selecionar personagem
 function selectCharacter() {
     transformSound.play();
     const char = characters[currentIndex];
@@ -264,22 +257,18 @@ function selectCharacter() {
     document.getElementById("dialog").style.display = "flex";
 }
 
-// Função para fechar o diálogo
 function closeDialog() {
     document.getElementById("dialog").style.display = "none";
 }
 
-// Atualizar personagens
 updateCharacters();
 
-// Função para navegar para o personagem anterior
 document.getElementById("prev").addEventListener("click", () => {
     currentIndex = (currentIndex - 1 + characters.length) % characters.length;
     selectSound.play();
     updateCharacters();
 });
 
-// Função para navegar para o próximo personagem
 document.getElementById("next").addEventListener("click", () => {
     currentIndex = (currentIndex + 1) % characters.length;
     selectSound.play();
