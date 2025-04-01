@@ -193,7 +193,23 @@ const characters = [
         { name: "Congelamento", cost: 8, dice: "1D10" },
         { name: "Escudo", cost: 6, dice: "2" },
         { name: "Mordida", cost: 5, dice: "1D12" }
-    ]}
+    ]},
+    { name: "AmeacaAquatica", health: 28, attacks: [
+        { name: "Soco", cost: 8, dice: "1D8" },
+        { name: "Jato", cost: 5, dice: "1D12" },
+        { name: "Tiro", cost: 5, dice: "1D8 x 2" },
+        { name: "Jato Quente", cost: 7, dice: "1D10 + Queimadura" }
+    ]},
+    { name: "Armato", health: 25, attacks: [
+        { name: "Arranhão", cost: 20, dice: "???" },
+        { name: "Terremoto", cost: 4, dice: "???" },
+        { name: "Agarrão", cost: 3, dice: "???" },
+        { name: "Escavação", cost: 5, dice: "???" }
+    ]},
+    { name: "AlienX", health: 80, attacks: [
+        { name: "Sim", cost: 20, dice: "???" },
+        { name: "Controle Total", cost: "???", dice: "???" }
+        }
 ];
 
 let currentIndex = 0;
