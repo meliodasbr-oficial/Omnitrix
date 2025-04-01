@@ -7,6 +7,7 @@ const characters = [
 ];
 
 let currentIndex = 0;
+const selectSound = new Audio("selectchar.mp3");
 
 function updateCharacters() {
     const prevIndex = (currentIndex - 1 + characters.length) % characters.length;
@@ -19,11 +20,13 @@ function updateCharacters() {
 
 document.getElementById("prev").addEventListener("click", () => {
     currentIndex = (currentIndex - 1 + characters.length) % characters.length;
+    selectSound.play(); 
     updateCharacters();
 });
 
 document.getElementById("next").addEventListener("click", () => {
     currentIndex = (currentIndex + 1) % characters.length;
+    selectSound.play();
     updateCharacters();
 });
 
