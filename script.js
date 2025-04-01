@@ -202,7 +202,7 @@ const bgMusic = document.getElementById("bg-music");
 const selectSound = document.getElementById("select-sound");
 const transformSound = document.getElementById("transform-sound");
 
-bgMusic.volume = 0.1;
+bgMusic.volume = 0.5;
 bgMusic.play();
 
 document.getElementById("mute-toggle").addEventListener("click", () => {
