@@ -210,3 +210,63 @@ footer p {
         background-color: #01d13b;
     }
 }
+
+.dialog {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(49, 169, 22, 0.8);
+    border: 2px solid #31a916;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    box-shadow: 0 0 10px #31a916;
+}
+
+.dialog-content {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.dialog button {
+    background: #31a916;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.audio-controls {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 9999; /* Garante que fique acima de tudo */
+}
+
+.audio-controls button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.audio-controls input[type="range"] {
+    width: 100px;
+    cursor: pointer;
+    accent-color: #31a916;
+}

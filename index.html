@@ -8,6 +8,23 @@
     <title>Omnitrix Selector</title>
 </head>
 <body>
+    <audio id="bg-music" loop>
+        <source src="background.mp3" type="audio/mp3">
+    </audio>
+    
+    <audio id="select-sound">
+        <source src="selectchar.mp3" type="audio/mp3">
+    </audio>
+    
+    <audio id="transform-sound">
+        <source src="transformchar.mp3" type="audio/mp3">
+    </audio>
+
+    <div class="audio-controls">
+        <button id="mute-toggle">🔊</button>
+        <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="0.1">
+    </div>
+
     <div class="menu">
         <button id="online">Online</button>
         <button id="local">Local</button>
@@ -19,7 +36,7 @@
         <div class="ring-overlay"></div>
         <div class="selector-ring">
             <div id="prev-character" class="character-slot"></div>
-            <div id="current-character" class="character-slot"></div>
+            <div id="current-character" class="character-slot" onclick="selectCharacter()"></div>
             <div id="next-character" class="character-slot"></div>
         </div>
     </div>
@@ -27,6 +44,16 @@
     <div class="nav-buttons">
         <button id="prev">&#9664;</button>
         <button id="next">&#9654;</button>
+        <button id="select" onclick="selectCharacter()">Selecionar</button>
+    </div>
+    
+    <div id="dialog" class="dialog">
+        <div class="dialog-content">
+            <h2 id="char-name"></h2>
+            <p id="char-health"></p>
+            <ul id="char-attacks"></ul>
+            <button onclick="closeDialog()">Fechar</button>
+        </div>
     </div>
     
     <footer>
