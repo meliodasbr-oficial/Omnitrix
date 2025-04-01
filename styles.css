@@ -1,4 +1,3 @@
-/* Geral */
 body {
     background: url('Omniverse.png') no-repeat center black;
     background-size: contain;
@@ -254,7 +253,7 @@ footer p {
     display: flex;
     align-items: center;
     gap: 10px;
-    z-index: 9999; /* Garante que fique acima de tudo */
+    z-index: 9999;
 }
 
 .audio-controls button {
