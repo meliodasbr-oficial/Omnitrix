@@ -208,8 +208,8 @@ const characters = [
     ]},
     { name: "AlienX", health: 80, attacks: [
         { name: "Sim", cost: 20, dice: "???" },
-        { name: "Controle Total", cost: "???", dice: "???" }
-        }
+        { name: "Controle Total", cost: ???, dice: "???" }
+    ]}
 ];
 
 let currentIndex = 0;
