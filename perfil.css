@@ -1,0 +1,105 @@
+/* Centralização geral do card */
+.perfil-central {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding-top: 50px;
+}
+
+/* Card de perfil */
+.perfil-card {
+  background: #111827;
+  color: white;
+  border-radius: 20px;
+  padding: 20px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 0 10px #00ffcc;
+  text-align: center;
+  z-index: 9;
+}
+
+.perfil-foto {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid #00ffcc;
+}
+
+.perfil-info p {
+  margin: 5px 0;
+}
+
+#dialogo-fotos {
+  background: #111827;
+  color: white;
+  border-radius: 10px;
+  padding: 20px;
+  border: 2px solid #00ffcc;
+  max-width: 400px;
+  text-align: center;
+}
+
+.fotos-personagens {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 15px 0;
+}
+
+.foto-opcao {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: transform 0.2s, border 0.3s;
+}
+
+.foto-opcao:hover {
+  transform: scale(1.1);
+  border: 2px solid #00ffcc;
+}
+
+#dialogo-fotos::backdrop {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+#dialogo-fotos {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  z-index: 99;
+  background: #111827;
+  color: white;
+  border-radius: 10px;
+  padding: 20px;
+  border: 2px solid #00ffcc;
+  max-width: 90%;
+  width: 350px;
+  text-align: center;
+  box-shadow: 0 0 20px #00ffcc;
+}
+
+#dialogo-fotos #fechar-dialogo {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  z-index: 100;
+}
+
+#dialogo-fotos #fechar-dialogo:hover {
+  color: #00ffcc;
+}

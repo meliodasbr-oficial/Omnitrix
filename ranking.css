@@ -468,3 +468,28 @@ body {
         background-color: #01d13b;
     }
 }
+
+/* Tayden */
+.tayden-container {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+    background: #1f2937;
+    padding: 6px 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #00ffcc;
+  }
+  
+  .tayden-icon {
+    width: 28px;
+    height: 28px;
+    margin-right: 8px;
+  }
+  
+  #tayden-quantidade {
+    font-weight: bold;
+    color: white;
+  }
